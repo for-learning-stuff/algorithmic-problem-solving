@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "taskName": "build c++",
+      "type": "shell",
+      "command": "g++",
+      "options": {
+        "cwd": "C:\\Users\\Boying\\Desktop\\OOP\\HW 8\\"
+      },
+      "args": [
+        "-std=c++11",
+        "-Wall",
+        "-g",
+        "-o",
+        "a",
+        "simple_sum.cpp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
