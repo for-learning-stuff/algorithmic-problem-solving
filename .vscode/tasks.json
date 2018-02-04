@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "g++",
       "options": {
-        "cwd": "C:\\Users\\Boying\\Desktop\\OOP\\HW 8\\"
+        "cwd": "${workspaceRoot}/hw02/"
       },
       "args": [
         "-std=c++11",
@@ -14,7 +14,7 @@
         "-g",
         "-o",
         "a",
-        "simple_sum.cpp"
+        "similarity.cpp"
       ],
       "group": {
         "kind": "build",
