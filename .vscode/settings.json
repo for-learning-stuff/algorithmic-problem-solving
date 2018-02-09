@@ -23,6 +23,10 @@
     "type_traits": "cpp",
     "typeinfo": "cpp",
     "string": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "tuple": "cpp",
+    "cmath": "cpp",
+    "array": "cpp",
+    "utility": "cpp"
   }
 }
