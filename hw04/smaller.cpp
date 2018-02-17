@@ -23,7 +23,9 @@ int main(){
                     while(smallest.size() && smallest.back() >= n){
                         smallest.pop_back();
                     }
-                    cout << smallest.back();
+                    if(smallest.size())
+                        cout << smallest.back();
+                    else cout << -1;
                 }
             } else{
                 cout << -1;
