@@ -1,0 +1,13 @@
+5
+john mary henry lisa bob
+10
+r mary
+l bob
+x mary lisa
+r john
+l bob
+e henry
+r lisa
+l mary
+l bob
+r john

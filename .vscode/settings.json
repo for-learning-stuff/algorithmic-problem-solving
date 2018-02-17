@@ -27,6 +27,7 @@
     "tuple": "cpp",
     "cmath": "cpp",
     "array": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "bitset": "cpp"
   }
 }
