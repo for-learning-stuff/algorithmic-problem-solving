@@ -28,6 +28,7 @@
     "cmath": "cpp",
     "array": "cpp",
     "utility": "cpp",
-    "bitset": "cpp"
+    "bitset": "cpp",
+    "valarray": "cpp"
   }
 }
