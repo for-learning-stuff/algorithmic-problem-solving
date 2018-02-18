@@ -1,36 +1,54 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 int main(){
-    queue<int> q;
-    deque<int> smallest;
+    queue<long long> q;
+    deque<long long> s;
+
+    unordered_map<long long,int> count;
 
     int queries;
     cin >> queries;
     char op;
-    int n;
+    long long n;
     while (queries--){
-        cin >> op >> n;
-        q.push(n);
+        cin >> op;
         // if()
         if(op == 'a'){
-            if (smallest.size()){
-                if (n > smallest.back()){
-                    cout << smallest.back(); 
-                    smallest.push_back(n);
+            cin >> n;
+            q.push(n);
+            if (s.size()){ //not empty
+                if (n > s.back()){ //push if greater than top
+                    cout << s.back() << endl; 
+                    s.push_back(n);
+                    count[n]++;
                 }
-                else{
-                    while(smallest.size() && smallest.back() >= n){
-                        smallest.pop_back();
-                    }
-                    if(smallest.size())
-                        cout << smallest.back();
-                    else cout << -1;
+                else{ //if less than top
+                    while(s.size() && s.back() >= n){
+                        if(s.back() > n)
+                            count[s.back()]--;
+                        s.pop_back();
+                    } 
+                    if(s.size()) // print smaller
+                        cout << s.back() << endl;
+                    else cout << -1 << endl; // no smaller
+                    count[n]++;
+                    s.push_back(n);
+                    // cout << "topstack" << s.back() << endl;
                 }
-            } else{
-                cout << -1;
-                smallest.push_back(n);
+            } else{ // nothing in list
+                cout << -1 << endl;
+                count[n]++;
+                s.push_back(n);
             }
+        } else {  
+            if (q.size()){
+                if (q.front() == s.front()){
+                    count[q.front()]--;
+                    if (!count[q.front()]) s.pop_front(); //duplicate
+                }
+                cout << q.front() << endl;
+                q.pop();
+            } else cout << -1 << endl;
         }
 
     }
@@ -40,8 +58,8 @@ int main(){
     //     q.pop();
     // }
     // cout << endl;
-    // while(smallest.size()){
-    //     cout << smallest.front();
-    //     smallest.pop_front();
+    // while(s.size()){
+    //     cout << s.front();
+    //     s.pop_front();
     // }
 }

@@ -29,6 +29,7 @@
     "array": "cpp",
     "utility": "cpp",
     "bitset": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "chrono": "cpp"
   }
 }
