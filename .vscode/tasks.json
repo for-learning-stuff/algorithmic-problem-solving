@@ -6,15 +6,14 @@
       "type": "shell",
       "command": "g++",
       "options": {
-        "cwd": "${workspaceRoot}/hw04/"
+        "cwd": "${workspaceRoot}/hw05/"
       },
       "args": [
         "-std=c++14",
         "-Wall",
         "-g",
         "-o",
-        "a",
-        "smaller.cpp"
+        "autocomplete.cpp"
       ],
       "group": {
         "kind": "build",

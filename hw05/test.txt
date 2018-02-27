@@ -1,0 +1,15 @@
+5
+aaacbcaab 2
+cca 10
+accbcca 3
+bacc 3
+ccbcacb 4
+8
+ccbc#
+cabb
+bb#
+acab
+a
+cac#
+abb
+aaaca#

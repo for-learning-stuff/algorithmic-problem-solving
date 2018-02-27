@@ -5,7 +5,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/hw04/a",
+            "program": "${workspaceRoot}/hw05/a.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
