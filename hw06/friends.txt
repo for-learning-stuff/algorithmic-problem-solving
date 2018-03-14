@@ -6,7 +6,6 @@ claire 20
 david 20
 5
 anna claire
-anna david
 bob david
+anna david
 alice david
-david david

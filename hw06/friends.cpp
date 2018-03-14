@@ -16,15 +16,16 @@ unordered_map<string,Node*> nton;
 unordered_map<string,int> ntoa;
 
 void insert(string n){
-  nton.insert(pair<string,Node*>(n, new Node(n)));
+  Node* newNode = new Node(n);
+  newNode->parent = newNode;
+
+  nton.insert(pair<string,Node*>(n, newNode));
 }
 
 Node* find(Node* n)
 {
-  if(n->parent){
+  if(n->parent != n){
     n->parent = find(n->parent); //path compression
-  } else{
-    return n;
   }
 
   return n->parent;
@@ -88,7 +89,7 @@ int main(){
     un(nton[a], nton[b]);
     Node* root = find(nton[a]);
     Node* root2 = find(nton[b]);
-    cout << "roots: " << root->name << " " << root2->name << endl;
+    // cout << "roots: " << root->name << " " << root2->name << endl;
     cout << root->min << " " << root->max << endl;
   }
 }

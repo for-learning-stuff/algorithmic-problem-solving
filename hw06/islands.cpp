@@ -17,16 +17,15 @@ vector<vector<bool>> showing;
 
 void insert(int n, int r){
   Node* node = new Node(r, grid[r].size()); //size before push should be index
+  node->parent = node;
   land[n].push_back(node);
   grid[r].push_back(node);
 }
 
 Node* find(Node* n)
 {
-  if(n->parent){
+  if(n->parent != n){
     n->parent = find(n->parent); //path compression
-  } else{
-    return n;
   }
 
   return n->parent;
